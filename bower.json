@@ -1,0 +1,27 @@
+{
+  "name": "testkueche",
+  "description": "Playground for various small web experiments, e.g. CSS animations",
+  "main": "",
+  "authors": [
+    "Peter-Benedikt von Niebelschütz"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "animation",
+    "javascript",
+    "jquery"
+  ],
+  "homepage": "https://github.com/fogshot/testkueche",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0"
+  }
+}

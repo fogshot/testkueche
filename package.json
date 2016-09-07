@@ -1,0 +1,16 @@
+{
+  "name": "CSS animations",
+  "version": "1.0.0",
+  "description": "CSS animations playground",
+  "keywords": [
+    "css",
+    "animation",
+    "javascript",
+    "jquery"
+  ],
+  "author": "Peter-Benedikt von Niebelschütz",
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "^1.7.9"
+  }
+}
