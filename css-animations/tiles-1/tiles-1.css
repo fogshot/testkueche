@@ -1,76 +1,45 @@
 .wrapper {
   display: flex;
   flex-flow: row wrap;
-}
-
-.tile {
-  margin: 10px;
-  width: 14.8vw;
-  height: 21.5vh;
-  background: rebeccapurple;
-  transform: scale(0);
-  animation-duration: 1.2s;
-}
+  justify-content: center; }
+  .wrapper .tile {
+    margin: 10px;
+    width: calc(100vw / 6 - 6 * 10px);
+    height: calc(100vh / 4 - 4 * 10px);
+    background: rebeccapurple;
+    transform: scale(0);
+    animation-duration: 1.2s; }
+  .wrapper.active .tile {
+    animation: pulse 1.2s ease-in forwards; }
+  .wrapper.active .row-1 {
+    animation-delay: 0s; }
+  .wrapper.active .row-2 {
+    animation-delay: 0.3s; }
+  .wrapper.active .row-3 {
+    animation-delay: 0.6s; }
+  .wrapper.active .row-4 {
+    animation-delay: 0.9s; }
+  .wrapper.inactive .tile {
+    transform: initial;
+    animation: pulse-reverse 1.2s ease-in forwards; }
+  .wrapper.inactive .row-1 {
+    animation-delay: 0.9s; }
+  .wrapper.inactive .row-2 {
+    animation-delay: 0.6s; }
+  .wrapper.inactive .row-3 {
+    animation-delay: 0.3s; }
+  .wrapper.inactive .row-4 {
+    animation-delay: 0s; }
 
 @keyframes pulse {
   0% {
-    transform: scale(0);
-  }
+    transform: scale(0); }
   100% {
-    transform: scale(1);
-  }
-}
-
+    transform: scale(1); } }
 @keyframes pulse-reverse {
   0% {
-    transform: scale(1);
-  }
+    transform: scale(1); }
   100% {
-    transform: scale(0);
-  }
-}
+    transform: scale(0); } }
 
-.active .tile {
-  animation: pulse 1.2s ease-in forwards;
-}
-
-.active .row-1 {
-  animation-delay: 0;
-}
-
-.active .row-2 {
-  animation-delay: .3s;
-}
-
-.active .row-3 {
-  animation-delay: .6s;
-}
-
-.active .row-4 {
-  animation-delay: .9s;
-}
-
-.inactive .tile {
-  animation: pulse-reverse 1.2s ease-in forwards;
-  transform: initial;
-}
-
-.inactive .row-1,
-.row-1 {
-  animation-delay: .9s;
-}
-
-.inactive .row-2,
-.row-2 {
-  animation-delay: .6s;
-}
-
-.inactive .row-3,
-.row-3 {
-  animation-delay: .3s;
-}
-
-.inactive .row-4,
-.row-4 {
-  animation-delay: 0;
-}
+/*# sourceMappingURL=tiles-1.css.map */
