@@ -1,0 +1,61 @@
+$rows: 4;
+$cols: 6;
+$delay: 0.3s;
+$duration: 1.2s;
+$scale-start: 0;
+$scale-end: 1;
+$margin: 10px;
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  .tile {
+    margin: $margin;
+    width: calc(100vw / #{$cols} - #{$cols} * 10px);
+    height: calc(100vh / #{$rows} - #{$rows} * 10px);
+    background: rebeccapurple;
+    transform: scale($scale-start);
+    // the JS needs to be able to find this on a classless tile
+    animation-duration: $duration;
+  }
+  &.active {
+    .tile {
+      animation: pulse $duration ease-in forwards;
+    }
+    @for $i from 1 through $rows {
+      .row-#{$i} {
+        animation-delay: ($i - 1) * $delay;
+      }
+    }
+  }
+  &.inactive {
+    .tile {
+      transform: initial;
+      animation: pulse-reverse $duration ease-in forwards;
+    }
+    @for $i from 1 through $rows {
+      .row-#{$i} {
+        animation-delay: ($rows - $i) * $delay;
+      }
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale($scale-start);
+  }
+  100% {
+    transform: scale($scale-end);
+  }
+}
+
+@keyframes pulse-reverse {
+  0% {
+    transform: scale($scale-end);
+  }
+  100% {
+    transform: scale($scale-start);
+  }
+}
